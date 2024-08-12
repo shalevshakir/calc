@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="calcstyle.css">
+
+<body>
+    <input style="text-align:right " id="res" value="0"><br>
+    <button onclick="digit7()">7</button>
+    <button onclick="digit8()">8</button>
+    <button onclick="digit9()">9</button>
+    <br>
+    <button onclick="digit4()">4</button>
+    <button onclick="digit5()">5</button>
+    <button onclick="digit6()">6</button>
+    <br>
+    <button onclick="digit1()">1</button>
+    <button onclick="digit2()">2</button>
+    <button onclick="digit3()">3</button>
+    <br>
+    <button onclick="digit0()">0</button> 
+    <button onclick="clearinput()">c</button>
+    <button onclick="plus()">+</button>
+    <br>
+    <button onclick="minus()">-</button>
+    <button onclick="multiply()">*</button>
+    
+    <button onclick="divide()">/</button>
+    <br>
+    <button onclick="equals()">=</button>
+
+    <script>
+        let clearflag = false
+        let firstnumber = 0
+        let operator = null
+
+        function digit7() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "7"
+            }
+        }
+
+        function digit8() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "8"
+            }
+        }
+
+        function digit9() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "9"
+            }
+        }
+
+        function digit6() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "6"
+            }
+        }
+
+        function digit5() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "5"
+            }
+        }
+
+        function digit4() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "4"
+            }
+        }
+
+        function digit3() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "3"
+            }
+        }
+
+        function digit2() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "2"
+            }
+        }
+
+        function digit1() {
+            if (res.value == "0" || clearflag) {
+                res.value = ""
+                clearflag = false
+            }
+            if (res.value.length < 7) {
+                res.value += "1"
+            }
+        }
+
+        function digit0() {
+            if (res.value.length < 7) {
+                res.value += "0"
+            }
+        }
+
+        function clearinput() {
+            res.value = "0"
+        }
+
+        function plus() {
+            firstnumber = parseInt(res.value)
+            operator = "+"
+            clearflag = true
+        }
+
+        function minus() {
+            firstnumber = parseInt(res.value)
+            operator = "-"
+            clearflag = true
+        }
+
+        function multiply() {
+            firstnumber = parseInt(res.value)
+            operator = "*"
+            clearflag = true
+        }
+
+        function divide() {
+            firstnumber = parseInt(res.value)
+            operator = "/"
+            clearflag = true
+        }
+
+        function equals() {
+            let secondnumber = parseInt(res.value)
+            let result = 0
+
+            if (operator === "+") {
+                result = firstnumber + secondnumber
+            } else if (operator === "-") {
+                result = firstnumber - secondnumber
+            } else if (operator === "*") {
+                result = firstnumber * secondnumber
+            } else if (operator === "/") {
+                result = firstnumber / secondnumber
+            }
+
+            res.value = result
+            clearflag = true
+        }
+    </script>
+</body>
+
+</html>

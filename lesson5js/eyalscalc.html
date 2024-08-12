@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input id="res" value="0"><br>
+    <!--  -->
+    <button>7</button><button onclick="digit8()">8</button> <button onclick="digit9()">9 </button><button onclick="claerInput()">C</button><br>
+    <button>4</button><button>5</button> <button>6 </button><button>*</button><br>
+    <button>1</button><button>2</button> <button>3 </button><button>/</button><br>
+    <button>0</button>
+    <button onclick="plus()">+</button>
+    <button>-</button>
+   
+   
+    <button>=</button>
+   
+    <script>
+        let clearFlag =false
+        let firstNumber=0
+
+
+        function plus(){
+            firstNumber=  res.value
+            clearFlag=true
+        }
+
+
+        function claerInput() {
+            res.value = "0"
+        }
+
+
+        function digit9() {
+            if (res.value == "0" || clearFlag) {
+                res.value = ""
+                clearFlag =false
+            }
+            if (res.value.length < 7) {
+                res.value += "9"
+            }
+        }
+        function digit8() {
+            if (res.value == "0"|| clearFlag ) {
+                res.value = ""
+                clearFlag =false
+            }
+            res.value += "8"
+        }
+    </script>
+</body>
+
+
+</html>

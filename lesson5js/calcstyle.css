@@ -1,0 +1,15 @@
+button {
+    color: rgb(236, 255, 127);
+    background-color: black;
+    height: 40px;
+    width: 40px;
+}
+
+input {
+    color: rgb(246, 255, 127);
+    background-color: black;
+    height: 25px;
+    font-size: large;
+    width: 150px;
+}
+
